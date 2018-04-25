@@ -1,0 +1,67 @@
+ .cont {
+     position: relative;
+     left: 50%;
+     margin-left: -100px;
+     top: 200px;
+     width: 200px;
+     height: 200px;
+     border: 1px solid #eee;
+ }
+
+ .text {
+     font-size: 40px;
+     text-align: center;
+     width: 200px;
+     height: 60px;
+     line-height: 60px;
+     color: black;
+     transition: color 500ms linear;
+      /* Firefox 4 */
+     -moz-transition: color 500ms linear;
+     /* Safari and Chrome */
+     -webkit-transition: color 500ms linear;
+     /* Opera */
+     -o-transition: color 500ms linear;
+ }
+
+ .addColor {
+     color: blue;
+ }
+
+ .line {
+     transition: width 500ms linear;
+     /* Firefox 4 */
+     -moz-transition: width 500ms linear;
+     /* Safari and Chrome */
+     -webkit-transition: width 500ms linear;
+     /* Opera */
+     -o-transition: width 500ms linear;
+     width: 0;
+     height: 8px;
+     margin: 0 auto;
+     background-color: blue;
+     border-radius: 5px;
+ }
+
+ .AddLine {
+     width: 180px;
+ }
+
+ a {
+     text-decoration: none;
+     position: absolute;
+     bottom: 0px;
+     left: 50px;
+     width: 100px;
+     height: 40px;
+     font-size: 18px;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 10px;
+     box-shadow: 10px 10px 10px #eee;
+     border: 1px solid rgb(153, 153, 153);
+ }
+ .AddButton{
+     background: blue;
+     color: #fff;
+ }
