@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sjsxy002</title>
+    <style>
+        .cont {
+            width: 1060px;
+            margin: 0 auto;
+            overflow: hidden;
+            /*清除浮动，使父元素始终包裹子元素*/
+            border: 1px solid rgb(93, 163, 255);
+            position: relative;
+            top: 200px;
+        }
+
+        .allbox {
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgb(3, 80, 196);
+            float: left;
+            margin: 50px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .box1 {
+            transform: skewX(30deg);
+            /*向左倾斜30度*/
+            -ms-transform: skewX(30deg);
+            /* IE 9 */
+            -webkit-transform: skewX(30deg);
+            /* Safari and Chrome */
+            -o-transform: skewX(30deg);
+            /* Opera */
+            -moz-transform: skewX(30deg);
+            /* Firefox */
+        }
+
+        .box2 {
+            transform: scaleX(0.5);
+            -ms-transform: scaleX(0.5);
+            -webkit-transform: scaleX(0.5);
+            -o-transform: scaleX(0.5);
+            -moz-transform: scaleX(0.5);
+        }
+
+        .box3 {
+            transform: rotate(45deg);
+            -o-tranform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+
+        .box4 {
+            transform: translate(10px, 20px);
+            -ms-transform: translate(10px, 20px);
+            -moz-transform: translate(10px, 20px);
+            -o-transform: translate(10px, 20px);
+            -webkit-transform: translate(10px, 20px);
+        }
+
+        .box5 {
+            transform: translate(10px, 20px) rotate(45deg) skewX(30deg) scaleX(0.5);
+            -moz-transform: translate(10px, 20px) rotate(45deg) skewX(30deg) scaleX(0.5);
+            -o-transform: translate(10px, 20px) rotate(45deg) skewX(30deg) scaleX(0.5);
+            -ms-transform: translate(10px, 20px) rotate(45deg) skewX(30deg) scaleX(0.5);
+            -webkit-transform: translate(10px, 20px) rotate(45deg) skewX(30deg) scaleX(0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="allbox box0">box0</div>
+        <div class="allbox box1">box1</div>
+        <div class="allbox box2">box2</div>
+        <div class="allbox box3">box3</div>
+        <div class="allbox box4">box4</div>
+        <div class="allbox box5">box5</div>
+    </div>
+</body>
+
+</html>
