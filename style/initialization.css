@@ -1,0 +1,124 @@
+/* css初始化 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0
+}
+
+fieldset,
+img {
+  border: 0 none
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none
+}
+
+input,
+select,
+textarea,
+button {
+  vertical-align: middle
+}
+
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer
+}
+
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 12px;
+  line-height: 1;
+  font-family: "lato", "微软雅黑", "\5B8B\4F53", "黑体", "宋体";
+  color: #666
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: none
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var,
+i {
+  font-style: normal;
+  font-weight: normal
+}
+
+caption {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+img {
+  vertical-align: top
+}
+
+input[type="text"] {
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  padding: 4px;
+}
+
+/*初始化结束*/
+/* 1rem = 100px */
+html {
+  font-size: 625%;
+}
