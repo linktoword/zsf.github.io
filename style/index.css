@@ -27,21 +27,15 @@ body {
   position: relative;
 }
 
-/* 字体图标栏 */
-.link-icon > .icon {
-  font-size: .30rem;
-  color: #fff;
-}
-
 /* 头像整体栏 */
 .person {
   width: 20%;
   height: 50%;
-  border: 1px solid red;
+  border: 1px solid orange;  
   position: absolute;
   top: 25%;
   left: 40%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* 头像边框旋转白点 */
@@ -53,7 +47,7 @@ body {
   position: absolute;
   top: 0;
   left: 19%;
-  animation:rotate 16s linear 0s infinite;
+  animation: rotate 16s linear 0s infinite;
 }
 
 .bgcolor .person .head-bd img {
@@ -67,13 +61,40 @@ body {
   overflow: hidden;
   margin: 0 auto; 
   border: .03rem solid rgba(0, 0, 0, .4);
-  border-radius: 50%;
-  
-  /* border: 1px solid red; */
+  border-radius: 50%; 
 }
 
 .bgcolor .person .head-img img {
   width: 100%;
   height: auto;
   border-radius: 50%;  
+}
+
+/* 字体图标栏 */
+  /* 图标字体样式 */
+.link-icon a .icon {
+  font-size: .40rem;
+  color: #fff;
+}
+
+  /* 图标字体布局  */
+.link-icon {
+  display: flex;
+  margin-top: .10rem;
+  flex-wrap: wrap;
+  justify-content: space-around;  
+  /* border: 1px solid blue; */
+}
+
+.link-icon a {
+  flex: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.link-icon .icon:hover {
+  color: rgba(2, 47, 141, .5);
+  transform: scale(1.5);
 }
