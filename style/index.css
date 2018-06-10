@@ -10,7 +10,8 @@
 
 html, 
 body {
-  width: 100%;
+  /* width: 100%; */
+  min-width: 1024px;
   height: 100%;
 }
 
@@ -31,7 +32,7 @@ body {
 .person {
   width: 20%;
   height: 50%;
-  border: 1px solid orange;  
+  /* border: 1px solid orange;   */
   position: absolute;
   top: 25%;
   left: 40%;
@@ -95,6 +96,37 @@ body {
 }
 
 .link-icon .icon:hover {
-  color: rgba(2, 47, 141, .5);
+  color: rgba(1, 174, 243, .8);
   transform: scale(1.5);
+}
+
+.link-icon a {
+  position: relative;
+}
+
+/* 邮箱显示样式 */
+.mail,
+.github {
+  position: absolute;
+  top: -50px;
+  height: 40px;
+  line-height: 40px;
+  /* width: 240px; */
+  text-align: center;
+  padding: 0 20px 0 20px;
+  border-radius: 10px;
+  background: rgba(1, 174, 243, .8);
+  color: #fff;
+  font-size: .15rem;
+  display: none;
+}
+
+.weixin,
+.qq {
+  width: 103px;
+  height: auto;
+  position: absolute;
+  bottom: 50px;
+  border: 5px solid rgba(1, 174, 243, .8);
+  display: none;
 }
