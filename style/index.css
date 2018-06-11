@@ -78,6 +78,12 @@ body {
   color: #fff;
 }
 
+.link-icon a .icon-weixin {
+  font-size: .45rem;
+  position: relative;
+  top: -.03rem;
+}
+
   /* 图标字体布局  */
 .link-icon {
   display: flex;
@@ -104,7 +110,7 @@ body {
   position: relative;
 }
 
-/* 邮箱显示样式 */
+/* 邮箱 Github显示样式 */
 .mail,
 .github {
   position: absolute;
@@ -121,12 +127,13 @@ body {
   display: none;
 }
 
+/* 微信QQ显示样式 */
 .weixin,
 .qq {
   width: 103px;
   height: auto;
   position: absolute;
-  bottom: 50px;
+  bottom: 55px;
   border: 5px solid rgba(1, 174, 243, .8);
   display: none;
 }
@@ -148,6 +155,7 @@ body {
   opacity: 0;
   z-index: 2;
 }
+
 /* 流星尾部样式 */
 .star:after {
   content: '';
@@ -207,7 +215,7 @@ body {
 }
 
 @keyframes star-ani {
-  0% {
+  /* 0% {
     opacity: 0;
     transform: scale(0) rotate(0) translate3d(0, 0, 0);
     -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
@@ -215,9 +223,9 @@ body {
   }
   25% {
     opacity: 1;
-    transform: scale(1) rotate(0) translate3d(-100px, 100px, 0);
-    -webkit-transform: scale(1) rotate(0) translate3d(-100px, 100px, 0);
-    -moz-transform: scale(1) rotate(0) translate3d(-100px, 100px, 0);
+    transform: scale(0.5) rotate(0) translate3d(-100px, 100px, 0);
+    -webkit-transform: scale(0.5) rotate(0) translate3d(-100px, 100px, 0);
+    -moz-transform: scale(0.5) rotate(0) translate3d(-100px, 100px, 0);
   }
   50% {
     opacity: 1;
@@ -236,5 +244,39 @@ body {
     transform: scale(1) rotate(0) translate3d(-400px, 400px, 0);
     -webkit-transform: scale(1) rotate(0) translate3d(-400px, 400px, 0);
     -moz-transform: scale(1) rotate(0) translate3d(-400px, 400px, 0);
-  }
+  } */
+   0% {
+     opacity: 0;
+     transform: translate3d(0, 0, 0);
+     -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+   }
+
+   25% {
+     opacity: 1;
+     transform:  translate3d(-100px, 100px, 0);
+     -webkit-transform:  translate3d(-100px, 100px, 0);
+     -moz-transform:  translate3d(-100px, 100px, 0);
+   }
+
+   50% {
+     opacity: 1;
+     transform: translate3d(-200px, 200px, 0);
+     -webkit-transform: translate3d(-200px, 200px, 0);
+     -moz-transform: translate3d(-200px, 200px, 0);
+   }
+
+   75% {
+     opacity: 1;
+     transform: translate3d(-300px, 300px, 0);
+     -webkit-transform: translate3d(-300px, 300px, 0);
+     -moz-transform: translate3d(-300px, 300px, 0);
+   }
+
+   100% {
+     opacity: 0;
+     transform: translate3d(-400px, 400px, 0);
+     -webkit-transform: translate3d(-400px, 400px, 0);
+     -moz-transform: translate3d(-400px, 400px, 0);
+   }
 }
