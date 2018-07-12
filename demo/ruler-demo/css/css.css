@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 标尺区块 */
+.ruler-contain{
+    width: 100vw;
+    height: 20vh;
+    margin: 1vh 0 0 1vw;
+    position: relative;
+    /* height: 20vh; */
+}
+.top-ruler {
+    position: relative;
+    width: 95%;
+}
+.top-ruler .cm,
+.top-ruler .mm {
+    position: absolute;
+    border-left: 1px solid #555;
+    height: 14px;
+    width: 10%;
+}
+.top-ruler .cm:after {
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    font: 11px/1 sans-serif;
+}
+.top-ruler .mm {
+    height: 5px;
+}
+.top-ruler .mm:nth-of-type(5) {
+    height: 10px;
+}
+.top-ruler .cm:nth-of-type(1) {
+    left: 0%;
+}
+.top-ruler .cm:nth-of-type(1):after {
+    content: "0";
+}
+.top-ruler .cm:nth-of-type(2) {
+    left: 10%;
+}
+.top-ruler .cm:nth-of-type(2):after {
+    content: "1";
+}
+.top-ruler .cm:nth-of-type(3) {
+    left: 20%;
+}
+.top-ruler .cm:nth-of-type(3):after {
+    content: "2";
+}
+.top-ruler .cm:nth-of-type(4) {
+    left: 30%;
+}
+.top-ruler .cm:nth-of-type(4):after {
+    content: "3";
+}
+.top-ruler .cm:nth-of-type(5) {
+    left: 40%;
+}
+.top-ruler .cm:nth-of-type(5):after {
+    content: "4";
+}
+.top-ruler .cm:nth-of-type(6) {
+    left: 50%;
+}
+.top-ruler .cm:nth-of-type(6):after {
+    content: "5";
+}
+.top-ruler .cm:nth-of-type(7) {
+    left: 60%;
+}
+.top-ruler .cm:nth-of-type(7):after {
+    content: "6";
+}
+.top-ruler .cm:nth-of-type(8) {
+    left: 70%;
+}
+.top-ruler .cm:nth-of-type(8):after {
+    content: "7";
+}
+.top-ruler .cm:nth-of-type(9) {
+    left: 80%;
+}
+.top-ruler .cm:nth-of-type(9):after {
+    content: "8";
+}
+.top-ruler .cm:nth-of-type(10) {
+    left: 90%;
+}
+.top-ruler .cm:nth-of-type(10):after {
+    content: "9";
+}
+.top-ruler .cm:nth-of-type(11) {
+    left: 100%;
+}
+.top-ruler .cm:nth-of-type(11):after {
+    content: "10";
+}
+.top-ruler .mm:nth-of-type(1) {
+    left: 10%;
+}
+.top-ruler .mm:nth-of-type(2) {
+    left: 20%;
+}
+.top-ruler .mm:nth-of-type(3) {
+    left: 30%;
+}
+.top-ruler .mm:nth-of-type(4) {
+    left: 40%;
+}
+.top-ruler .mm:nth-of-type(5) {
+    left: 50%;
+}
+.top-ruler .mm:nth-of-type(6) {
+    left: 60%;
+}
+.top-ruler .mm:nth-of-type(7) {
+    left: 70%;
+}
+.top-ruler .mm:nth-of-type(8) {
+    left: 80%;
+}
+.top-ruler .mm:nth-of-type(9) {
+    left: 90%;
+}
+.top-ruler .mm:nth-of-type(10) {
+    left: 100%;
+}
+
+/* 底部标尺样式 */
+.bottom-ruler {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    transform: scale(1, -1); /* 垂直翻转 */
+}
+.bottom-ruler .cm,
+.bottom-ruler .mm {
+    position: absolute;
+    border-left: 1px solid #555;
+    height: 14px;
+    width: 10%;
+}
+.bottom-ruler .cm:after {
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    font: 11px/1 sans-serif;
+    transform: scale(1, -1); /* 垂直翻转 */
+}
+.bottom-ruler .mm {
+    height: 5px;
+}
+.bottom-ruler .mm:nth-of-type(5) {
+    height: 10px;
+}
+.bottom-ruler .cm:nth-of-type(1) {
+    left: 0%;
+}
+.bottom-ruler .cm:nth-of-type(1):after {
+    content: "0";
+}
+.bottom-ruler .cm:nth-of-type(2) {
+    left: 10%;
+}
+.bottom-ruler .cm:nth-of-type(2):after {
+    content: "1";
+}
+.bottom-ruler .cm:nth-of-type(3) {
+    left: 20%;
+}
+.bottom-ruler .cm:nth-of-type(3):after {
+    content: "2";
+}
+.bottom-ruler .cm:nth-of-type(4) {
+    left: 30%;
+}
+.bottom-ruler .cm:nth-of-type(4):after {
+    content: "3";
+}
+.bottom-ruler .cm:nth-of-type(5) {
+    left: 40%;
+}
+.bottom-ruler .cm:nth-of-type(5):after {
+    content: "4";
+}
+.bottom-ruler .cm:nth-of-type(6) {
+    left: 50%;
+}
+.bottom-ruler .cm:nth-of-type(6):after {
+    content: "5";
+}
+.bottom-ruler .cm:nth-of-type(7) {
+    left: 60%;
+}
+.bottom-ruler .cm:nth-of-type(7):after {
+    content: "6";
+}
+.bottom-ruler .cm:nth-of-type(8) {
+    left: 70%;
+}
+.bottom-ruler .cm:nth-of-type(8):after {
+    content: "7";
+}
+.bottom-ruler .cm:nth-of-type(9) {
+    left: 80%;
+}
+.bottom-ruler .cm:nth-of-type(9):after {
+    content: "8";
+}
+.bottom-ruler .cm:nth-of-type(10) {
+    left: 90%;
+}
+.bottom-ruler .cm:nth-of-type(10):after {
+    content: "9";
+}
+.bottom-ruler .cm:nth-of-type(11) {
+    left: 100%;
+}
+.bottom-ruler .cm:nth-of-type(11):after {
+    content: "10";
+}
+.bottom-ruler .mm:nth-of-type(1) {
+    left: 10%;
+}
+.bottom-ruler .mm:nth-of-type(2) {
+    left: 20%;
+}
+.bottom-ruler .mm:nth-of-type(3) {
+    left: 30%;
+}
+.bottom-ruler .mm:nth-of-type(4) {
+    left: 40%;
+}
+.bottom-ruler .mm:nth-of-type(5) {
+    left: 50%;
+}
+.bottom-ruler .mm:nth-of-type(6) {
+    left: 60%;
+}
+.bottom-ruler .mm:nth-of-type(7) {
+    left: 70%;
+}
+.bottom-ruler .mm:nth-of-type(8) {
+    left: 80%;
+}
+.bottom-ruler .mm:nth-of-type(9) {
+    left: 90%;
+}
+.bottom-ruler .mm:nth-of-type(10) {
+    left: 100%;
+}
+   
+
+/* 节目样式 */
+.program-container {
+    position: absolute;
+    top: 0;
+    /* left: 2%; */
+    /* width: 100%; */
+    height: 100%;
+    /* border: 1px solid red; */
+}
+.program-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* margin: 0 auto; */
+    font-family: arial, SimSun;
+    /* font-size: 0;
+    letter-spacing: 0; */
+}
+
+.program-content .item {
+    /* display: inline-block; */
+    height: 100%;
+    /* margin-right: 20px; */
+    /* *display: inline; */
+    /* *zoom: 1; */
+}
+
+.program-content .item1 {
+    margin: 0;
+    width: 350px;
+    background-color: rgba(31, 174, 255, .5);
+}
+
+.program-content .item2 {
+    margin: 0;
+    width: 150px;
+    background-color: rgba(255, 46, 18, .5);
+}
+
+.program-content .item3 {
+    width: 100px;
+    margin: 0;
+    background-color: rgba(0, 193, 63, .5);
+}
+
+.program-content .item4 {
+    width: 200px;
+    margin: 0;
+    background-color: rgba(225, 183, 0, .5);
+}
+
+.program-content .item5 {
+    width: 250px;
+    margin: 0;
+    background-color: rgba(114, 0, 172, .5);
+}
+
+.program-content span {
+    display: block;
+    height: 100%;
+    line-height: 100px;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+}
+
+/* 删除区块样式 */
+.delete-contain {
+    height: 220px; 
+    margin: 20px 0 0 0;
+    background-color: rgb(224, 136, 136);
+} 
+
+/* 添加区块样式 */
+.add-contain {
+    height: 220px;
+    margin: 0 0 20px 0;
+    background-color: #ccc;
+}
+
+.add-contain span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 10px;
+    line-height: 50px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #7200ac;
+}
