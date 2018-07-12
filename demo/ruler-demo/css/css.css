@@ -5,7 +5,7 @@
 
 /* 标尺区块 */
 .ruler-contain{
-    width: 100vw;
+    width: 95vw;
     height: 20vh;
     margin: 1vh 0 0 1vw;
     position: relative;
@@ -44,61 +44,61 @@
     left: 10%;
 }
 .top-ruler .cm:nth-of-type(2):after {
-    content: "1";
+    content: "10";
 }
 .top-ruler .cm:nth-of-type(3) {
     left: 20%;
 }
 .top-ruler .cm:nth-of-type(3):after {
-    content: "2";
+    content: "20";
 }
 .top-ruler .cm:nth-of-type(4) {
     left: 30%;
 }
 .top-ruler .cm:nth-of-type(4):after {
-    content: "3";
+    content: "30";
 }
 .top-ruler .cm:nth-of-type(5) {
     left: 40%;
 }
 .top-ruler .cm:nth-of-type(5):after {
-    content: "4";
+    content: "40";
 }
 .top-ruler .cm:nth-of-type(6) {
     left: 50%;
 }
 .top-ruler .cm:nth-of-type(6):after {
-    content: "5";
+    content: "50";
 }
 .top-ruler .cm:nth-of-type(7) {
     left: 60%;
 }
 .top-ruler .cm:nth-of-type(7):after {
-    content: "6";
+    content: "60";
 }
 .top-ruler .cm:nth-of-type(8) {
     left: 70%;
 }
 .top-ruler .cm:nth-of-type(8):after {
-    content: "7";
+    content: "70";
 }
 .top-ruler .cm:nth-of-type(9) {
     left: 80%;
 }
 .top-ruler .cm:nth-of-type(9):after {
-    content: "8";
+    content: "80";
 }
 .top-ruler .cm:nth-of-type(10) {
     left: 90%;
 }
 .top-ruler .cm:nth-of-type(10):after {
-    content: "9";
+    content: "90";
 }
 .top-ruler .cm:nth-of-type(11) {
     left: 100%;
 }
 .top-ruler .cm:nth-of-type(11):after {
-    content: "10";
+    content: "100";
 }
 .top-ruler .mm:nth-of-type(1) {
     left: 10%;
@@ -168,61 +168,61 @@
     left: 10%;
 }
 .bottom-ruler .cm:nth-of-type(2):after {
-    content: "1";
+    content: "10";
 }
 .bottom-ruler .cm:nth-of-type(3) {
     left: 20%;
 }
 .bottom-ruler .cm:nth-of-type(3):after {
-    content: "2";
+    content: "20";
 }
 .bottom-ruler .cm:nth-of-type(4) {
     left: 30%;
 }
 .bottom-ruler .cm:nth-of-type(4):after {
-    content: "3";
+    content: "30";
 }
 .bottom-ruler .cm:nth-of-type(5) {
     left: 40%;
 }
 .bottom-ruler .cm:nth-of-type(5):after {
-    content: "4";
+    content: "40";
 }
 .bottom-ruler .cm:nth-of-type(6) {
     left: 50%;
 }
 .bottom-ruler .cm:nth-of-type(6):after {
-    content: "5";
+    content: "50";
 }
 .bottom-ruler .cm:nth-of-type(7) {
     left: 60%;
 }
 .bottom-ruler .cm:nth-of-type(7):after {
-    content: "6";
+    content: "60";
 }
 .bottom-ruler .cm:nth-of-type(8) {
     left: 70%;
 }
 .bottom-ruler .cm:nth-of-type(8):after {
-    content: "7";
+    content: "70";
 }
 .bottom-ruler .cm:nth-of-type(9) {
     left: 80%;
 }
 .bottom-ruler .cm:nth-of-type(9):after {
-    content: "8";
+    content: "80";
 }
 .bottom-ruler .cm:nth-of-type(10) {
     left: 90%;
 }
 .bottom-ruler .cm:nth-of-type(10):after {
-    content: "9";
+    content: "90";
 }
 .bottom-ruler .cm:nth-of-type(11) {
     left: 100%;
 }
 .bottom-ruler .cm:nth-of-type(11):after {
-    content: "10";
+    content: "100";
 }
 .bottom-ruler .mm:nth-of-type(1) {
     left: 10%;
@@ -269,18 +269,18 @@
     width: 100%;
     height: 100%;
     display: flex;
-    /* margin: 0 auto; */
     font-family: arial, SimSun;
-    /* font-size: 0;
-    letter-spacing: 0; */
 }
 
+/* 节目名字和播放时长 */
 .program-content .item {
-    /* display: inline-block; */
     height: 100%;
-    /* margin-right: 20px; */
-    /* *display: inline; */
-    /* *zoom: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
 }
 
 .program-content .item1 {
@@ -321,6 +321,35 @@
     text-align: center;
     color: #fff;
 }
+
+/* 放大缩小按钮 */
+.btn-contain {
+    display: flex;
+    color: #fff;
+    font-size: 18px;
+}
+
+.enlarge-btn,
+.decrease-btn {
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #7200ac; */
+    margin: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 5px 5px 1px 2px #eee;
+    cursor: pointer;
+}
+
+.enlarge-btn {
+    background: green;
+}
+
+.decrease-btn {
+    background: red;
+}
+
 
 /* 删除区块样式 */
 .delete-contain {
