@@ -6,279 +6,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ruler</title>
-    <link rel="stylesheet" href="./css/css.css">
 
     <!-- 拖拽css -->
     <link rel="stylesheet" href="./css/jquery.dad.css">
     <!-- 尺子样式 -->
+    <link rel="stylesheet" href="./css/css.css">
     <script src="./js/jquery-3.3.1.min.js"></script>
     <!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
     <script src="./js/jquery.dad.min.js"></script>
 </head>
 
 <body>
-    <div class="add-contain"></div>
-    <div class="ruler-contain">
-        <!-- 顶部标尺 -->
-        <div class='top-ruler'>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
+    <div class="delete-contain">
+        <embed src="./css/delete.svg"/>
+    </div>
+    <div class="ruler">
+        <div class="ruler-header">
+            <!-- <div class="add-contain"></div> -->
+            <div class="allProgramesTime">总时长&nbsp;:&nbsp;<span></span>s</div>
+            <div class="btn-contain">
+                <div class="enlarge-btn">+</div>
+                <div class="decrease-btn">-</div>
             </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'></div>
         </div>
-        <!-- 底部标尺 -->
-        <div class='bottom-ruler'>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-                <div class='mm'></div>
-            </div>
-            <div class='cm'></div>
-        </div>
-        <!-- 节目 -->
-        <div class="program-container">
-            <div class="program-content">
-                <!-- <div class="item item1">
-                    <div class="programName">节目1</div>
-                    <div class="playTime">3.5s</div>  
+        <div class="ruler-contain">
+            <!-- 顶部标尺 -->
+            <div class='top-ruler'>
+                <div class='cm' data-content='0'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
                 </div>
-                <div class="item item2">
-                    <div class="programName">节目2</div>
-                    <div class="playTime">3.5s</div>  
+                <div class='cm two-cm' data-content='100'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
                 </div>
-                <div class="item item3">
-                    <div class="programName">节目3</div>
-                    <div class="playTime">3.5s</div>  
+                <div class='cm' data-content='200'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
                 </div>
-                <div class="item item4">
-                    <div class="programName">节目4</div>
-                    <div class="playTime">3.5s</div>  
+                <div class='cm' data-content='300'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
                 </div>
-                <div class="item item5">
-                    <div class="programName">节目5</div>
-                    <div class="playTime">3.5s</div>  
-                </div> -->
+                <div class='cm' data-content='400'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='500'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='600'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='700'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='800'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='900'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='1000'></div>
+            </div>
+            <!-- 底部标尺 -->
+            <div class='bottom-ruler'>
+                <div class='cm' data-content='0'>
+                    <!-- <div class="num">1</div> -->
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='100'>
+                    <!-- <div class="num">2</div> -->
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='200'>
+                    <!-- <div class="num">3</div> -->
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='300'>
+                    <!-- <div class="num">4</div> -->
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='400'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='500'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='600'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='700'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='800'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='900'>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                    <div class='mm'></div>
+                </div>
+                <div class='cm' data-content='1000'></div>
+            </div>
+            <!-- 节目 -->
+            <div class="program-container">
+                <div class="program-content">
+                </div>
             </div>
         </div>
     </div>
-    <div class="btn-contain">
-        <div class="enlarge-btn">放大</div>
-        <div class="decrease-btn">缩小</div>
-    </div>
-    
-    <div class="delete-contain"></div>
     <script src="./js/js.js"></script>
 </body>
 

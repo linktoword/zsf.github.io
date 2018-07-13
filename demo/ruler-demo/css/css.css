@@ -2,18 +2,75 @@
     margin: 0;
     padding: 0;
 }
+.ruler {
+    width: 95vw;
+    margin: 2.5vw;    
+}
+.ruler .ruler-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.ruler .ruler-header .allProgramesTime {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    color: #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a5a5a5;
+}
+
+.ruler-header .allProgramesTime span {
+    color: #555;
+}
+
+/* 放大缩小按钮 */
+.ruler .ruler-header .btn-contain {
+    display: flex;
+    width: 100px;
+    height: 30px;
+    color: #a5a5a5;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+}
+
+.ruler .ruler-header .enlarge-btn,
+.ruler .ruler-header .decrease-btn {
+    width: 50px;
+    height: 30px; 
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+.ruler .ruler-header .enlarge-btn {
+    border-radius: 10px 0 0 10px;
+}
+.ruler .ruler-header .decrease-btn {
+    border-radius: 0 10px 10px 0;
+}
+
+.ruler .ruler-header .enlarge-btn:hover,
+.ruler .ruler-header .decrease-btn:hover {
+    background: rgb(91, 228, 91);
+    color: #fff
+}
 
 /* 标尺区块 */
 .ruler-contain{
-    width: 95vw;
+    width: 100%;
     height: 20vh;
-    margin: 1vh 0 0 1vw;
+    margin-top: 3vh;
+    /* margin: 1vh 0 0 1vw; */
     position: relative;
     /* height: 20vh; */
 }
 .top-ruler {
     position: relative;
-    width: 95%;
+    width: 100%;
 }
 .top-ruler .cm,
 .top-ruler .mm {
@@ -28,6 +85,14 @@
     left: -4px;
     font: 11px/1 sans-serif;
 }
+
+.top-ruler .num {
+    /* display: inline-block; */
+    font-size: 14px;
+    position: absolute;
+    top: 30px;
+}
+
 .top-ruler .mm {
     height: 5px;
 }
@@ -38,67 +103,67 @@
     left: 0%;
 }
 .top-ruler .cm:nth-of-type(1):after {
-    content: "0";
+    content: attr(data-content);  /* 获取相应data-content上的值设置content内容 */
 }
 .top-ruler .cm:nth-of-type(2) {
     left: 10%;
 }
 .top-ruler .cm:nth-of-type(2):after {
-    content: "10";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(3) {
     left: 20%;
 }
 .top-ruler .cm:nth-of-type(3):after {
-    content: "20";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(4) {
     left: 30%;
 }
 .top-ruler .cm:nth-of-type(4):after {
-    content: "30";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(5) {
     left: 40%;
 }
 .top-ruler .cm:nth-of-type(5):after {
-    content: "40";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(6) {
     left: 50%;
 }
 .top-ruler .cm:nth-of-type(6):after {
-    content: "50";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(7) {
     left: 60%;
 }
 .top-ruler .cm:nth-of-type(7):after {
-    content: "60";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(8) {
     left: 70%;
 }
 .top-ruler .cm:nth-of-type(8):after {
-    content: "70";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(9) {
     left: 80%;
 }
 .top-ruler .cm:nth-of-type(9):after {
-    content: "80";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(10) {
     left: 90%;
 }
 .top-ruler .cm:nth-of-type(10):after {
-    content: "90";
+    content: attr(data-content);
 }
 .top-ruler .cm:nth-of-type(11) {
     left: 100%;
 }
 .top-ruler .cm:nth-of-type(11):after {
-    content: "100";
+    content: attr(data-content);
 }
 .top-ruler .mm:nth-of-type(1) {
     left: 10%;
@@ -135,7 +200,7 @@
 .bottom-ruler {
     position: absolute;
     bottom: 0;
-    width: 95%;
+    width: 100%;
     transform: scale(1, -1); /* 垂直翻转 */
 }
 .bottom-ruler .cm,
@@ -162,67 +227,67 @@
     left: 0%;
 }
 .bottom-ruler .cm:nth-of-type(1):after {
-    content: "0";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(2) {
     left: 10%;
 }
 .bottom-ruler .cm:nth-of-type(2):after {
-    content: "10";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(3) {
     left: 20%;
 }
 .bottom-ruler .cm:nth-of-type(3):after {
-    content: "20";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(4) {
     left: 30%;
 }
 .bottom-ruler .cm:nth-of-type(4):after {
-    content: "30";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(5) {
     left: 40%;
 }
 .bottom-ruler .cm:nth-of-type(5):after {
-    content: "40";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(6) {
     left: 50%;
 }
 .bottom-ruler .cm:nth-of-type(6):after {
-    content: "50";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(7) {
     left: 60%;
 }
 .bottom-ruler .cm:nth-of-type(7):after {
-    content: "60";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(8) {
     left: 70%;
 }
 .bottom-ruler .cm:nth-of-type(8):after {
-    content: "70";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(9) {
     left: 80%;
 }
 .bottom-ruler .cm:nth-of-type(9):after {
-    content: "80";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(10) {
     left: 90%;
 }
 .bottom-ruler .cm:nth-of-type(10):after {
-    content: "90";
+    content: attr(data-content);
 }
 .bottom-ruler .cm:nth-of-type(11) {
     left: 100%;
 }
 .bottom-ruler .cm:nth-of-type(11):after {
-    content: "100";
+    content: attr(data-content);
 }
 .bottom-ruler .mm:nth-of-type(1) {
     left: 10%;
@@ -275,7 +340,7 @@
 /* 节目名字和播放时长 */
 .program-content .item {
     height: 100%;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -313,53 +378,36 @@
     background-color: rgba(114, 0, 172, .5);
 }
 
-.program-content span {
+/* .program-content span {
     display: block;
     height: 100%;
     line-height: 100px;
     font-size: 32px;
     text-align: center;
     color: #fff;
-}
-
-/* 放大缩小按钮 */
-.btn-contain {
-    display: flex;
-    color: #fff;
-    font-size: 18px;
-}
-
-.enlarge-btn,
-.decrease-btn {
-    width: 50px;
-    height: 50px;
-    /* border: 1px solid #7200ac; */
-    margin: 50px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    box-shadow: 5px 5px 1px 2px #eee;
-    cursor: pointer;
-}
-
-.enlarge-btn {
-    background: green;
-}
-
-.decrease-btn {
-    background: red;
-}
-
+} */
 
 /* 删除区块样式 */
 .delete-contain {
-    height: 220px; 
-    margin: 20px 0 0 0;
-    background-color: rgb(224, 136, 136);
+    width: 60%;
+    height: 100px; 
+    margin: 20px auto 0;
+    background-color: rgba(255, 93, 93, 0.932);
+    position: relative;
+    visibility: hidden;
 } 
-
+.delete-contain embed {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
 /* 添加区块样式 */
-.add-contain {
+/* .add-contain {
     height: 220px;
     margin: 0 0 20px 0;
     background-color: #ccc;
@@ -375,4 +423,4 @@
     text-align: center;
     color: #fff;
     background-color: #7200ac;
-}
+} */

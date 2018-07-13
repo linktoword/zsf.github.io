@@ -3,27 +3,36 @@ $(function () {
     var data = [
         {
             "programName":"节目1",
-            "playTime":30.5
+            "playTime":300.5
         },
         {
             "programName":"节目2",
-            "playTime":31
+            "playTime":310
         },
         {
             "programName":"节目3",
-            "playTime":21.5
+            "playTime":210.5
         },
         {
             "programName":"节目4",
-            "playTime":11.5
+            "playTime":110.5
         },
     ];
-    function calProgramWidth( ) {
-        // 每秒的宽度
-        var rulermmWidth = $(".mm").width();
+
+    // 根据标尺每厘米宽度计算每个节目的宽度
+    function calProgramWidth() {
+        let everyCmSeconds = $(".two-cm").attr("data-content");
+        // 标尺每秒的宽度
+        let rulermmWidth = $(".cm").width();
+
+        // 每秒代表的宽度
+        let everySecondWidth = rulermmWidth / everyCmSeconds;
+
+        // let calProgramsAllTime = 0;
+
         // 遍历数据生成节目单 
         $.each(data,function(index,value){
-            var itemWidth = value.playTime * rulermmWidth;
+            var itemWidth = value.playTime * everySecondWidth;
             var num = index + 1;
             var items = $(` <div class="item item`+ num +`" style="width:` + itemWidth + `px;">
                                 <div class="programName">`+ value.programName  + `</div>
@@ -31,55 +40,81 @@ $(function () {
                             </div>`);
 
             $(".program-content").append(items[0]);
+            // calProgramsAllTime+= value.playTime;
+        });
+        
+    }
+    // 注册拖动属性 拖动插件
+    function dragPlugin() {
+        let d = $('.program-content').dad();
+
+        d.addDropzone('.delete-contain', function(e){
+            e.remove();
+            // 删除后隐藏删除区域
+            $(".delete-contain").css("visibility", "hidden");
+            // 计算删除后的总时间
+            let deleteTime = parseFloat(e.find(".playTime").text());
+            let deleteAfterTime = parseFloat($(".allProgramesTime span").text()) - deleteTime;
+            $(".allProgramesTime span").text(deleteAfterTime);
         });
     }
-    calProgramWidth();
 
-    $(window).resize(function () {          //当浏览器大小变化时
-        //var rulermmWidth = $(".mm").width();
-        //console.log(rulermmWidth);
-        $(".program-content").empty();
+    // 计算节目列表总时间
+    // 计算函数 依据获取节目列表各个项数的显示播放时间 相加
+    function calProgramsAllTime() {
+        let AllTime = $(".program-content .playTime");
+        var ProgramsAllTime = 0; //存储总时间
+        $.each(AllTime,function(index,value){
+            let everyItemTime = parseFloat($(this).text());
+            ProgramsAllTime+= everyItemTime;
+        })
+        $(".allProgramesTime span").text(ProgramsAllTime);
+    }
+
+    calProgramWidth();  // 计算生成节目列表
+    dragPlugin();       // 节目列表注册拖动
+    calProgramsAllTime();
+    
+    var $cm = $(".ruler-contain .cm:not(:eq(0), :eq(11))"); // 选择标尺数字刻度，不包含0位置的刻度
+    var $enlargeBtn = $(".enlarge-btn");
+    var $decreaseBtn = $(".decrease-btn");
+    
+    var baseScaleNum = 100; // 基础缩放倍数
+
+    // 放大函数
+    $enlargeBtn.click(function(){
+        $cm.each(function () {
+            let Num = parseInt($(this).attr("data-content")) + baseScaleNum;
+            $(this).attr("data-content", Num); 
+        })
+        
+        $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动
         calProgramWidth();
-        // alert($(window).height());          //浏览器时下窗口可视区域高度
-        // alert($(document).height());        //浏览器时下窗口文档的高度
-        // alert($(document.body).height());   //浏览器时下窗口文档body的高度
-        // alert($(document.body).outerHeight(true)); //浏览器时下窗口文档body的总高度 包括border padding margin
+        dragPlugin();
+    });
+
+    // 缩小函数
+    $decreaseBtn.click(function(){
+        if($(".two-cm").attr("data-content") > baseScaleNum) {
+            $cm.each(function () {
+                let Num = parseInt($(this).attr("data-content") - baseScaleNum);
+                $(this).attr("data-content", Num); 
+                $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动
+                calProgramWidth();
+                dragPlugin();
+            })
+        }else{
+            alert("已经缩放到最小！");
+        }
+        
+    });
+
+    // 当浏览器大小变化时
+    $(window).resize(function () {                 
+        $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动 
+        calProgramWidth();
+        dragPlugin();
     });
     
 })
 
-// 拖动插件
-$(function(){ 
-    var d = $('.program-content').dad();
-
-    d.addDropzone('.delete-contain', function(e){
-		e.remove();
-    });
-    var target = $('.add-contain');
-
-    d.addDropzone(target, function (e) {
-        e.find('span').appendTo(target);
-        e.remove();
-    });
-});
-
-// 标尺放大缩小
-$(function () {
-    $enlargeBtn = $(".enlarge-btn");
-    $decreaseBtn = $(".decrease-btn");
-    $rulerContain = $(".ruler-contain");
-    // 基础缩放倍数
-    let baseScaleNum = 1;
-    // 放大函数
-    $enlargeBtn.click(function(){
-        baseScaleNum+= 0.1;
-        let scale = `scale(` + baseScaleNum + `)`;
-        $rulerContain.css("transform", scale);   
-      });
-    // 缩小函数
-      $decreaseBtn.click(function(){
-        baseScaleNum-= 0.1;
-        let scale = `scale(` + baseScaleNum + `)`;
-        $rulerContain.css("transform", scale);   
-      });
-})
