@@ -75,17 +75,24 @@ $(function () {
     dragPlugin();       // 节目列表注册拖动
     calProgramsAllTime();
     
-    var $cm = $(".ruler-contain .cm:not(:eq(0), :eq(11))"); // 选择标尺数字刻度，不包含0位置的刻度
+    var $topCm = $(".ruler-contain .cm:lt(11)"); 
+    var $botCm = $(".ruler-contain .cm:gt(10)");
     var $enlargeBtn = $(".enlarge-btn");
     var $decreaseBtn = $(".decrease-btn");
     
     var baseScaleNum = 100; // 基础缩放倍数
+    var count = 1; //放大缩小点击计数
 
     // 放大函数
     $enlargeBtn.click(function(){
-        $cm.each(function () {
-            let Num = parseInt($(this).attr("data-content")) + baseScaleNum;
-            $(this).attr("data-content", Num); 
+        count+=1;
+        $topCm.each(function (index,value) {
+            let Num = index * baseScaleNum * count;
+            $(value).attr("data-content", Num); 
+        })
+        $botCm.each(function (index, value) {
+            let Num = index * baseScaleNum * count;
+            $(value).attr("data-content", Num);
         })
         
         $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动
@@ -95,14 +102,19 @@ $(function () {
 
     // 缩小函数
     $decreaseBtn.click(function(){
-        if($(".two-cm").attr("data-content") > baseScaleNum) {
-            $cm.each(function () {
-                let Num = parseInt($(this).attr("data-content") - baseScaleNum);
-                $(this).attr("data-content", Num); 
-                $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动
-                calProgramWidth();
-                dragPlugin();
+        if(count > 1) {
+            count-=1;
+            $topCm.each(function (index, value) {
+                let Num = index * baseScaleNum * count;
+                $(value).attr("data-content", Num);
             })
+            $botCm.each(function (index, value) {
+                let Num = index * baseScaleNum * count;
+                $(value).attr("data-content", Num);
+            })
+            $(".program-content").empty(); // 将节目单清空 计算宽度渲染新节目单 注册拖动
+            calProgramWidth();
+            dragPlugin();
         }else{
             alert("已经缩放到最小！");
         }
