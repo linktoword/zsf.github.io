@@ -12,18 +12,20 @@
     justify-content: space-between;
 }
 .ruler .ruler-header .allProgramesTime {
-    width: 200px;
+    /* width: 200px; */
     height: 30px;
     border-radius: 10px;
-    color: #a5a5a5;
+    color: #ffffff;
+    background: rgba(0, 193, 63, .5);
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #a5a5a5;
+    border: 1px solid #25f500;
 }
 
 .ruler-header .allProgramesTime span {
-    color: #555;
+    color: rgb(255, 255, 255);
 }
 
 /* 放大缩小按钮 */
@@ -31,11 +33,12 @@
     display: flex;
     width: 100px;
     height: 30px;
-    color: #a5a5a5;
+    color: #25f500;
     font-size: 25px;
     font-weight: bold;
-    border: 1px solid #a5a5a5;
+    border: 1px solid #25f500;
     border-radius: 10px;
+    box-shadow: 2px 2px 3px #25f500;
 }
 
 .ruler .ruler-header .enlarge-btn,
@@ -348,35 +351,61 @@
     font-size: 20px;
 }
 
+.program-content .item0 {
+    margin: 0;
+    background-color: rgba(54, 213, 224, 0.5);
+}
+
 .program-content .item1 {
     margin: 0;
-    width: 350px;
     background-color: rgba(31, 174, 255, .5);
 }
 
 .program-content .item2 {
     margin: 0;
-    width: 150px;
     background-color: rgba(255, 46, 18, .5);
 }
 
 .program-content .item3 {
-    width: 100px;
     margin: 0;
     background-color: rgba(0, 193, 63, .5);
 }
 
 .program-content .item4 {
-    width: 200px;
     margin: 0;
     background-color: rgba(225, 183, 0, .5);
 }
 
 .program-content .item5 {
-    width: 250px;
     margin: 0;
     background-color: rgba(114, 0, 172, .5);
 }
+
+.program-content .item5 {
+    margin: 0;
+    background-color: rgba(100, 89, 15, 0.5);
+}
+
+.program-content .item6 {
+    margin: 0;
+    background-color: rgba(204, 51, 82, 0.5);
+}
+
+.program-content .item7 {
+    margin: 0;
+    background-color: rgba(238, 17, 150, 0.5);
+}
+
+.program-content .item8 {
+    margin: 0;
+    background-color: rgba(34, 221, 71, 0.5);
+}
+
+.program-content .item9 {
+    margin: 0;
+    background-color: rgba(133, 153, 102, 0.5);
+}
+
 
 /* .program-content span {
     display: block;
